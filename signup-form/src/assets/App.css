@@ -1,0 +1,10 @@
+.app-container {
+  background-image: linear-gradient(
+    rgba(255, 90, 100, 0.4)
+  ),
+  url('/bg-intro-desktop.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}
