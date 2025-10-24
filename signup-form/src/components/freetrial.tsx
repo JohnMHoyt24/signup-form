@@ -1,7 +1,9 @@
+import "../assets/freetrial.css";
+
 function  FreeTrial() {
   return (
-    <div>
-      <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+    <div className="freetrial-container">
+      <p><span>Try it free for 7 days</span> then $20/mo. thereafter</p>
     </div>
   );
 }

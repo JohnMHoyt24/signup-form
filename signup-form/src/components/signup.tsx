@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../assets/signup.css";
 
 interface User {
   id: number;
@@ -54,7 +55,7 @@ const SignupForm: React.FC = () => {
   }
 
     return (
-      <form>
+      <form className="signup-container">
         <div>
           <label htmlFor="firstname">First Name: </label>
           <input
