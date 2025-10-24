@@ -1,0 +1,14 @@
+.freetrial-container {
+  border-style: transparent;
+  border-radius: 5px;
+  background-color: mediumpurple;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 1px;
+  padding-right: 4px;
+  color: white;
+}
+.freetrial-container p span {
+  font-weight: bold;
+}
