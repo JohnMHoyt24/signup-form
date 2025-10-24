@@ -1,0 +1,6 @@
+.message-container {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
