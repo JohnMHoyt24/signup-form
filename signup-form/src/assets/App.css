@@ -1,6 +1,6 @@
 .app-container {
   background-image: linear-gradient(
-    rgba(255, 90, 100, 0.4)
+    rgba(255, 30, 0, 0.5)
   ),
   url('/bg-intro-desktop.png');
   background-size: cover;
