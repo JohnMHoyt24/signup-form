@@ -1,10 +1,38 @@
 .app-container {
-  background-image: linear-gradient(
-    rgba(255, 30, 0, 0.5)
-  ),
-  url('/bg-intro-desktop.png');
+  background-image: linear-gradient(rgba(255, 30, 0, 0.5)),
+    url('/bg-intro-desktop.png');
   background-size: cover;
   background-position: center;
   min-height: 100vh;
   background-repeat: no-repeat;
+}
+
+.intro-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+}
+
+.freetrial-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 20px
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 25%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
 }
