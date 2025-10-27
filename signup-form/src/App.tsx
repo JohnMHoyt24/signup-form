@@ -8,9 +8,15 @@ function App() {
 
   return (
     <div className='app-container'>
-      <IntroMessage />
-      <FreeTrial />
-      <SignupForm />
+      <div className='intro-wrapper'>
+        <IntroMessage />
+      </div>
+      <div className='freetrial-wrapper'>
+        <FreeTrial />
+      </div>
+      <div className='form-wrapper'>
+        <SignupForm />
+      </div>
     </div>  
   )
 }
