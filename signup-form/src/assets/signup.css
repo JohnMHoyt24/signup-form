@@ -1,4 +1,40 @@
 .signup-container {
   /*display: flex;
   flex-direction: row;*/
+  font-family: Poppins, sans-serif;
+  border: transparent;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+}
+
+.terms-and-services {
+  font-size: 12px;
+}
+
+input {
+  border-radius: 5px;
+  padding: 7px;
+  margin-bottom: 15px;
+}
+
+.invalid-input {
+  border-color: red;
+  color: red; /* Change text color to red */
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 15px
+}
+
+button {
+  border-radius: 5px;
+  padding: 7px;
+  color: white;
+  font-family: Poppins, sans-serif;
+  text-transform: uppercase;
+  background-color: turquoise;
 }

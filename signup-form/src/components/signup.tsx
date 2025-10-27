@@ -57,49 +57,53 @@ const SignupForm: React.FC = () => {
     return (
       <form className="signup-container">
         <div>
-          <label htmlFor="firstname">First Name: </label>
           <input
             type="text"
             id="firstname"
+            placeholder="Enter your first name..."
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
+            className={errors.firstName ? 'invalid-input' : ''}
           />
           {errors.firstName && <p className="error">{errors.firstName}</p>}
         </div>
         <div>
-          <label htmlFor="lastname">Last Name: </label>
           <input
             type="text"
             id="lastname"
+            placeholder="Enter your last name..."
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
+            className={errors.lastName ? 'invalid-input' : ''}
           />
           {errors.lastName && <p className="error">{errors.lastName}</p>}
         </div>
         <div>
-          <label htmlFor="email">Email: </label>
           <input
             type="email"
             id="email"
+            placeholder="Enter your email address..."
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className={errors.email ? 'invalid-input' : ''}
           />
           {errors.email && <p className="error">{errors.email}</p>}
         </div>
         <div>
-          <label htmlFor="password">Password: </label>
           <input
             type="password"
             id="password"
+            placeholder="Create a password..."
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className={errors.password ? 'invalid-input' : ''}
           />
           {errors.password && <p className="error">{errors.password}</p>}
         </div>
         <button type="submit" onClick={handleSubmit}>
-          Sign Up
+          Claim your free trial
         </button>
-        <p>
+        <p className="terms-and-services">
           By clicking the button, you are agreeing to our {""}
           <a href="#">Terms and Services</a>
         </p>
