@@ -2,8 +2,9 @@
   border-style: transparent;
   border-radius: 5px;
   background-color: mediumpurple;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   text-align: center;
+  width: 75%;
   font-family: 'Poppins', sans-serif;
   padding: 1px;
   padding-right: 4px;

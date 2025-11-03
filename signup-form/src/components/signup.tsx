@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FreeTrial from "./freetrial";
 import "../assets/signup.css";
 
 interface User {
@@ -34,6 +35,14 @@ const SignupForm: React.FC = () => {
     return newErrors;
   }
 
+  const clearErrorOnChange = (fieldName: string) => {
+    setErrors((prevErrors) => {
+      const newErrors = { ...prevErrors };
+      delete newErrors[fieldName];
+      return newErrors;
+    });
+  }
+
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     const validationErrors = validate();
@@ -49,65 +58,83 @@ const SignupForm: React.FC = () => {
         email,
         password,
       };
-      console.log("Form is valid. New user: ", newUser); 
+      console.log("Form is valid. New user: ", newUser);
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setPassword("");
     }
 
   }
 
     return (
-      <form className="signup-container">
-        <div>
-          <input
-            type="text"
-            id="firstname"
-            placeholder="Enter your first name..."
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            className={errors.firstName ? 'invalid-input' : ''}
-          />
-          {errors.firstName && <p className="error">{errors.firstName}</p>}
-        </div>
-        <div>
-          <input
-            type="text"
-            id="lastname"
-            placeholder="Enter your last name..."
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            className={errors.lastName ? 'invalid-input' : ''}
-          />
-          {errors.lastName && <p className="error">{errors.lastName}</p>}
-        </div>
-        <div>
-          <input
-            type="email"
-            id="email"
-            placeholder="Enter your email address..."
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className={errors.email ? 'invalid-input' : ''}
-          />
-          {errors.email && <p className="error">{errors.email}</p>}
-        </div>
-        <div>
-          <input
-            type="password"
-            id="password"
-            placeholder="Create a password..."
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className={errors.password ? 'invalid-input' : ''}
-          />
-          {errors.password && <p className="error">{errors.password}</p>}
-        </div>
-        <button type="submit" onClick={handleSubmit}>
-          Claim your free trial
-        </button>
-        <p className="terms-and-services">
-          By clicking the button, you are agreeing to our {""}
-          <a href="#">Terms and Services</a>
-        </p>
-      </form>
+      <div>
+        <form className="signup-container">
+          <div>
+            <input
+              type="text"
+              id="firstname"
+              placeholder="Enter your first name..."
+              value={firstName}
+              onChange={(e) => {
+                setFirstName(e.target.value);
+                clearErrorOnChange('firstName');
+            }}
+              className={errors.firstName ? 'invalid-input' : ''}
+            />
+            {errors.firstName && <p className="error">{errors.firstName}</p>}
+          </div>
+          <div>
+            <input
+              type="text"
+              id="lastname"
+              placeholder="Enter your last name..."
+              value={lastName}
+              onChange={(e) => {
+                setLastName(e.target.value);
+                clearErrorOnChange('lastName');
+              }}
+              className={errors.lastName ? 'invalid-input' : ''}
+            />
+            {errors.lastName && <p className="error">{errors.lastName}</p>}
+          </div>
+          <div>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email address..."
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                clearErrorOnChange('email');
+              }}
+              className={errors.email ? 'invalid-input' : ''}
+            />
+            {errors.email && <p className="error">{errors.email}</p>}
+          </div>
+          <div>
+            <input
+              type="password"
+              id="password"
+              placeholder="Create a password..."
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+                clearErrorOnChange('password');
+              }}
+              className={errors.password ? 'invalid-input' : ''}
+            />
+            {errors.password && <p className="error">{errors.password}</p>}
+          </div>
+          <button type="submit" onClick={handleSubmit}>
+            Claim your free trial
+          </button>
+          <p className="terms-and-services">
+            By clicking the button, you are agreeing to our {""}
+            <a href="#">Terms and Services</a>
+          </p>
+        </form>
+      </div>
     );
   };
 

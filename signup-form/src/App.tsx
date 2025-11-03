@@ -8,9 +8,7 @@ function App() {
 
   return (
     <div className='app-container'>
-      <div className='intro-wrapper'>
-        <IntroMessage />
-      </div>
+      <IntroMessage />
       <div className='freetrial-wrapper'>
         <FreeTrial />
       </div>
