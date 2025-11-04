@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import FreeTrial from "./freetrial";
 import "../assets/signup.css";
 
 interface User {
